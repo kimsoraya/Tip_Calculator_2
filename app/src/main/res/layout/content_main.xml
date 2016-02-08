@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.kimschuiten.tipcalculator2.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let&apos;s start calculating!"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Title"
+        android:textSize="30dp"
+        android:textColor="#54fce3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your start amount?"
+        android:id="@+id/start_amount"
+        android:layout_below="@+id/Title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/cash_input"
+        android:hint="0"
+        android:layout_below="@+id/start_amount"
+        android:layout_centerHorizontal="true"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much tip do you want to give?"
+        android:id="@+id/text_percentage"
+        android:layout_below="@+id/cash_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <EditText
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/chosen_percentage"
+        android:hint="3"
+        android:layout_below="@+id/text_percentage"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:id="@+id/calculate_button"
+        android:layout_marginTop="118dp"
+        android:layout_below="@+id/text_percentage"
+        android:layout_centerHorizontal="true"
+        android:drawableTint="#3cf7db"
+        android:textColor="#060606"
+        android:backgroundTint="#40f9e3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is you $$ damage tonight?"
+        android:id="@+id/damage"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/calculate_button"
+        android:layout_alignStart="@+id/start_amount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="€"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/cash_input"
+        android:layout_alignBottom="@+id/cash_input"
+        android:textSize="30dp"
+        android:layout_alignStart="@+id/calculate_button" />
+
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="€"
+        android:id="@+id/textView2"
+        android:textSize="30dp"
+        android:layout_below="@+id/text_percentage"
+        android:layout_alignBottom="@+id/chosen_percentage"
+        android:layout_toEndOf="@+id/textView" />
+</RelativeLayout>
